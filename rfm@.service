@@ -1,0 +1,15 @@
+[Unit]
+Description=Transceiver for HopeRF module %I
+After=network.target
+
+[Service]
+Environment="nodebin=/home/regular/.nvm/versions/node/v8.11.3/bin"
+ExecStartPre=/usr/bin/modprobe rfm12b
+ExecStart=/usr/bin/bash -xc '${nodebin}/node ${nodebin}/rfm-transceiver server'
+
+# Restart every >2 seconds to avoid StartLimitInterval failure
+RestartSec=5
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
