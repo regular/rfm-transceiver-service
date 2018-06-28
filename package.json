@@ -1,0 +1,24 @@
+{
+  "name": "rfm-transceiver-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "rfm-transceiver": "bin.js"
+  },
+  "author": "jan@lagomorph.de",
+  "license": "ISC",
+  "dependencies": {
+    "mdmanifest": "^1.0.8",
+    "muxrpc": "^7.0.1",
+    "muxrpcli": "^1.1.0",
+    "pull-looper": "^1.0.0",
+    "pull-net": "^1.0.2",
+    "pull-notify": "^0.1.1",
+    "pull-stream": "^3.6.8",
+    "zerr": "^1.0.4"
+  }
+}
